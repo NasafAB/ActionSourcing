@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+	  <RootNamespace>NasafAB.ActionSourcing</RootNamespace>
+	  <Nullable>enable</Nullable>
+	  <Authors>Nasaf AB, Sweden</Authors>
+	  <Company>Nasaf AB, Sweden</Company>
+	  <PackageId>NasafAB.ActionSourcing</PackageId>
+	  <Description>Implementation of the action sourcing pattern.</Description>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	  <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
+	  <RepositoryUrl>https://github.com/NasafAB/ActionSourcing</RepositoryUrl>
+	  <PackageProjectUrl>https://github.com/NasafAB/ActionSourcing</PackageProjectUrl>
+	  <Copyright>2021 Nasaf AB, Sweden</Copyright>
+	  <Version>1.0.0-alpha.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

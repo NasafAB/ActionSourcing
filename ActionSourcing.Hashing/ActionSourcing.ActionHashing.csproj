@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>NasafAB.ActionSourcing.Hashing</RootNamespace>
+    <PackageId>NasafAB.ActionSourcing.ActionHashing</PackageId>
+    <Version>1.0.0-alpha.1</Version>
+    <Authors>Nasaf AB, Sweden</Authors>
+    <Product>ActionSourcing</Product>
+    <Description>Adds hashable actions on top of ActionSourcing.</Description>
+    <Copyright>2021 Nasaf AB, Sweden</Copyright>
+    <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/NasafAB/ActionSourcing</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/NasafAB/ActionSourcing</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ActionSourcing\ActionSourcing.csproj" />
+  </ItemGroup>
+
+</Project>
